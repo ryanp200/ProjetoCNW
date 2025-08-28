@@ -1,0 +1,104 @@
+/* Paleta do site vai ser:
+#9fb0cc; - azul claro <- hover
+#6d7f8d; - azul médio <- botões
+#1e293b; - azul escuro <- barra de navegação
+#0f172a; - azul muito escuro <- fundo
+#ddd; - branco <- texto em geral */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sansation", sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.barranav {
+    background-color: #1e293b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 16px 24px;
+    position: relative;
+    width: 100vw;
+}
+
+.barranav span {
+    cursor: pointer;
+    user-select: none;
+    padding: 6px 14px;
+    background: none;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 1em;
+    box-shadow: none;
+    transition: background 0.2s;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.barranav span:hover {
+    rotate: 4deg;
+}
+
+.barranav nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 24px;
+    width: 200px;
+    background: #1e293b;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    z-index: 10;
+    animation: fadeIn 0.2s;
+    flex-direction: column;
+}
+
+.barranav.open nav {
+    display: flex;
+}
+
+.barranav nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.barranav nav ul li {
+    margin: 0;
+    padding: 0;
+    transition: 0.3s ease;
+}
+
+.barranav nav ul li a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background 0.18s, color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+.barranav nav ul li a:hover {
+    background: #56647a;
+    color: #fff;
+    transform: translateY(-1px);
+    opacity: 0.8;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
