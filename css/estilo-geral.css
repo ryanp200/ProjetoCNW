@@ -8,6 +8,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+/* estilo geral do nosso site*/
 * {
     margin: 0;
     padding: 0;
@@ -98,6 +99,41 @@ body {
     opacity: 0.8;
 }
 
+.conteudo {
+    padding: 40px 24px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* textos */
+h1{
+    margin-bottom: 16px;
+    font-size: 2.5em;
+    color: #ddd;
+}
+
+p{
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.textos-tamanho-1{
+    font-size: 1.6em;
+}
+
+.textos-tamanho-2{
+    font-size: 1.4em;
+}
+.textos-tamanho-3{
+    font-size: 1.2em;
+}
+.textos-tamanho-4{
+    font-size: 1em;
+}
+.textos-tamanho-5{
+    font-size: 0.8em;
+}
+
+/*animações*/
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px);}
     to { opacity: 1; transform: translateY(0);}
