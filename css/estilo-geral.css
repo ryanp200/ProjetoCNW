@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: #0f172a;
+    background-image: linear-gradient(135deg, #0f172a 0%, #030e20 50%);
     color: #fff;
     width: 100vw;
     min-height: 100vh;
@@ -42,7 +42,7 @@ body {
     color: #fff;
     border-radius: 4px;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.3em;
     box-shadow: none;
     transition: background 0.2s;
     display: inline-block;
@@ -157,14 +157,37 @@ p{
     text-indent: 90px;
 }
 .citacao{
-    margin-top: 70px;
+    margin: 70px 0 70px 0;
+    padding: 50px;
+    line-height: 1.25;
     color: #d6d6d6;
+    transition: 0.3s;
+    quotes: "“" "„";
+    position: relative;
 }
+.citacao:hover{
+    color: #fff;
+    line-height: 1.4;
+    transform: scale(1.02);
+}
+.citacao::before,
+.citacao::after {
+    font-size: 3em;
+    font-family: 'Georgia';
+}
+
 .citacao::before {
     content: open-quote;
+    position: absolute;
+    left: -5px;
+    top: 1px;
 }
+
 .citacao::after {
     content: close-quote;
+    position: absolute;
+    right: -5px;
+    bottom: 1px;
 }
 .citacao-autor{
     margin-left: 32px;
@@ -220,5 +243,14 @@ p{
     margin-bottom: 230px;
 }
 #texto-cabecalho-home{
+    width: 100%;
+}
+#textos-home{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
     width: 100%;
 }
