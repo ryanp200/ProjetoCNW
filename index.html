@@ -20,8 +20,20 @@
             </nav>
         </header>
         <section class="conteudo">
-            <h1>Início</h1>
-            <p class="textos-tamanho-1">Conteúdo da página inicial.</p>
+            <header id="cabecalho-home">
+                <section id="texto-cabecalho-home">
+                    <h1>Amazon Web Services</h1>
+                    <p class="textos-tamanho-1 justificado">A AWS é como um grande centro de ferramentas na nuvem. Em vez de comprar servidores e se preocupar com infraestrutura, você simplesmente usa o que precisa: espaço para guardar arquivos, poder de processamento, bancos de dados, inteligência artificial. Tudo está ali, disponível sob demanda.</p>
+                </section>
+                <section id="container-logo-aws-home">
+                    <img src="imgs/logo/logo aws.webp" id="logo-aws-home" alt="Logo AWS">
+                </section>
+            </header>
+            <section class="bloco-texto-50 justificado">
+                <p class="textos-tamanho-0 citacao italico centralizado-alinhado">Não perca tempo discutindo como deveria ser um bom homem. <strong>Seja um.</strong></p>
+                <p class="textos-tamanho-1 citacao-autor centralizado-alinhado">Marco Aurélio</p>
+                <p class="textos-tamanho-1 margem-grande identado">Assim como Marco Aurélio incentiva a ação prática, quem faz uso da AWS tem a oportunidade de colocar ideias em prática rapidamente. Em vez de apenas planejar ou discutir possibilidades, os usuários podem experimentar, criar e inovar, aproveitando os recursos disponíveis para transformar projetos em realidade.</p>
+            </section>
         </section>
         <script>
             const menuNav = document.querySelector('.barranav');
@@ -34,6 +46,16 @@
                 if (!menuNav.contains(e.target)) {
                     menuNav.classList.remove('open');
                 }
+            });
+        </script>
+        <script>
+            const logoAws=document.getElementById('logo-aws-home');
+            let rotacao=false;
+            logoAws.addEventListener('click',()=>{
+                rotacao=!rotacao;
+                logoAws.style.transition = '0.3s';
+                logoAws.style.transform = rotacao ? 'rotate(15deg)' : 'rotate(0deg)';
+                logoAws.style.borderRadius = rotacao ? '80px' : '8px';
             });
         </script>
     </body>

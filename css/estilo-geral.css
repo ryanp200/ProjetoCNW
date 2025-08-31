@@ -19,14 +19,18 @@
 body {
     background-color: #0f172a;
     color: #fff;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .barranav {
-    background-color: #1e293b;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    background-color: #090f1b;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.09);
     padding: 16px 24px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 5;
     width: 100vw;
 }
 
@@ -100,7 +104,8 @@ body {
 }
 
 .conteudo {
-    padding: 40px 24px;
+    margin-top: 4em;
+    padding: 100px 60px;
     animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -115,11 +120,24 @@ p{
     line-height: 1.6;
     color: #ccc;
 }
-
+.justificado{
+    text-align: justify;
+}
+.italico{
+    font-style: italic;
+}
+.direita-alinhado{
+    text-align: right;
+}
+.centralizado-alinhado{
+    text-align: center;
+}
+.textos-tamanho-0{
+    font-size: 2em;
+}
 .textos-tamanho-1{
     font-size: 1.6em;
 }
-
 .textos-tamanho-2{
     font-size: 1.4em;
 }
@@ -132,9 +150,75 @@ p{
 .textos-tamanho-5{
     font-size: 0.8em;
 }
+.bloco-texto-50{
+    width: 50%;
+}
+.identado{
+    text-indent: 90px;
+}
+.citacao{
+    margin-top: 70px;
+    color: #d6d6d6;
+}
+.citacao::before {
+    content: open-quote;
+}
+.citacao::after {
+    content: close-quote;
+}
+.citacao-autor{
+    margin-left: 32px;
+    margin-top: 8px;
+    color: #bbb;
+}
+.citacao-autor::before {
+    content: "— ";
+}
+/* margens pré definidas */
+.margem-pequena{
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.margem-media{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.margem-grande{
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
 
+/*imagens*/
+#container-logo-aws-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#logo-aws-home {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    rotate: -5deg;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
 /*animações*/
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px);}
     to { opacity: 1; transform: translateY(0);}
+}
+
+
+/*outras providências*/
+
+#cabecalho-home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 230px;
+}
+#texto-cabecalho-home{
+    width: 100%;
 }
