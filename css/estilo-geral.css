@@ -98,7 +98,172 @@ body {
     opacity: 0.8;
 }
 
+.conteudo {
+    margin-top: 4em;
+    padding: 100px 60px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* textos */
+h1{
+    margin-bottom: 16px;
+    font-size: 2.5em;
+    color: #ddd;
+}
+
+p{
+    line-height: 1.6;
+    color: #ccc;
+}
+.justificado{
+    text-align: justify;
+}
+.italico{
+    font-style: italic;
+}
+.direita-alinhado{
+    text-align: right;
+}
+.esquerda-alinhado{
+    text-align: left;
+}
+.centralizado-alinhado{
+    text-align: center;
+}
+.textos-tamanho-0{
+    font-size: 2em;
+}
+.textos-tamanho-1{
+    font-size: 1.6em;
+}
+.textos-tamanho-2{
+    font-size: 1.4em;
+}
+.textos-tamanho-3{
+    font-size: 1.2em;
+}
+.textos-tamanho-4{
+    font-size: 1em;
+}
+.textos-tamanho-5{
+    font-size: 0.8em;
+}
+.bloco-texto-50{
+    width: 50%;
+}
+.identado{
+    text-indent: 90px;
+}
+.citacao{
+    margin: 70px 0 70px 0;
+    padding: 50px;
+    line-height: 1.25;
+    color: #d6d6d6;
+    transition: 0.3s;
+    quotes: "“" "„";
+    position: relative;
+}
+.citacao:hover{
+    color: #fff;
+    line-height: 1.4;
+    transform: scale(1.02);
+}
+.citacao::before,
+.citacao::after {
+    font-size: 3em;
+    font-family: 'Georgia';
+}
+
+.citacao::before {
+    content: open-quote;
+    position: absolute;
+    left: -5px;
+    top: 1px;
+}
+
+.citacao::after {
+    content: close-quote;
+    position: absolute;
+    right: -5px;
+    bottom: 1px;
+}
+.citacao-autor{
+    margin-left: 32px;
+    margin-top: 8px;
+    color: #bbb;
+}
+.citacao-autor::before {
+    content: "— ";
+}
+/* margens pré definidas */
+.margem-pequena{
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.margem-media{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.margem-grande{
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+/*imagens*/
+#container-logo-aws-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#logo-aws-home {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    rotate: -5deg;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+/*animações*/
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px);}
     to { opacity: 1; transform: translateY(0);}
+}
+
+/*Lista de definições*/
+dl {
+    margin: 40px 0;
+    padding: 0 0 0 20px;
+    border-left: 4px solid #ddd;
+    max-width: 800px;
+}
+dt {
+    font-size: 22px;
+    font-weight: 1000;
+}
+dd {
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 16px;
+}
+/*outras providências*/
+
+#cabecalho-home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 230px;
+}
+#texto-cabecalho-home{
+    width: 100%;
+}
+#textos-home{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
 }
