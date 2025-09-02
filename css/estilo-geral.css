@@ -218,6 +218,8 @@ p{
     margin-bottom: 48px;
 }
 
+
+
 /*imagens*/
 #container-logo-aws-home{
     display: flex;
@@ -260,6 +262,23 @@ p{
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px);}
     to { opacity: 1; transform: translateY(0);}
+}
+
+/*Lista de definições*/
+dl {
+    margin: 40px 0;
+    padding: 0 0 0 20px;
+    border-left: 4px solid #ddd;
+    max-width: 800px;
+}
+dt {
+    font-size: 22px;
+    font-weight: 1000;
+}
+dd {
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 16px;
 }
 
 
